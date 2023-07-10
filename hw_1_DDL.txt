@@ -1,0 +1,246 @@
+create table employees (
+	id serial primary key,
+	employee_name varchar(50) not null
+);
+
+create table salary_NDA (
+	id serial primary key,
+	monthly_salary int not null 
+);
+
+create table employee_salary(
+	id serial primary key,
+	employee_id int unique not null,
+	salary_id int not null
+);
+
+create table rolesNDA(
+	id serial primary key,
+	role_name int unique not null
+);
+
+alter table rolesNDA alter column role_name type varchar(30);
+
+select * from rolesNDA;
+select * from employee_salary;
+select * from employees;
+select * from salary_NDA;
+
+insert into rolesNDA (role_name)
+values			('Junior Python developer'),
+			('Middle Python developer'),
+			('Senior Python developer'),
+			('Junior Java developer'),
+			('Middle Java developer'),
+			('Senior Java developer'),
+			('Junior JavaScript developer'),
+			('Middle JavaScript developer'),
+			('Senior JavaScript developer'),
+			('Junior Manual QA engineer'),
+			('Middle Manual QA engineer'),
+			('Senior Manual QA engineer'),
+			('Project Manager'),
+			('Designer'),
+			('HR'),
+			('CEO'),
+			('Sales manager'),
+			('Junior Automation QA engineer'),
+			('Middle Automation QA engineer'),
+			('Senior Automation QA engineer');
+
+			
+			
+
+
+insert into employee_salary (id, employee_id, salary_id)
+values			(1, 18, 1),
+			(2, 1, 2),
+			(3, 5, 3),
+			(4, 7, 5),
+			(5, 39, 9),
+			(6, 11, 15),
+			(7, 15, 13),
+			(8, 33, 2),
+			(9, 2, 2),
+			(10, 43, 3),
+			(11, 37, 1),
+			(12, 13, 1),
+			(13, 38, 10),
+			(14, 17, 9),
+			(15, 12, 8),
+			(16, 29, 7),
+			(17, 8, 7),
+			(18, 36, 6),
+			(19, 32, 5),
+			(20, 44, 4),
+			(21, 40, 4),
+			(22, 51, 13),
+			(23, 14, 11),
+			(24, 99, 12),
+			(25, 120, 2),
+			(26, 58, 3),
+			(27, 64, 8),
+			(28, 9, 9),
+			(29, 3, 7),
+			(30, 77, 8),
+			(31, 98, 5),
+			(32, 90, 5),
+			(33, 22, 7),
+			(34, 16, 14),
+			(35, 26, 15),
+			(36, 24, 11),
+			(37, 23, 12),
+			(38, 59, 11),
+			(39, 60, 10),
+			(40, 19	, 10);
+			
+
+insert into salary_NDA (monthly_salary)
+values			(1000),
+			(1100),
+			(1200),
+			(1300),
+			(1400),
+			(1500),
+			(1600),
+			(1700),
+			(1800),
+			(1900),
+			(2000),
+			(2100),
+			(2200),
+			(2300),
+			(2400),
+			(2500);
+			
+
+
+insert into employees (employee_name)
+values			('Алексеев A.A.'),
+			('Баранова М.М.'),
+			('Беляев С.М.'),
+			('Беспалова А.Д.'),
+			('Борисов М.Н.'),
+			('Васильева В.М.'),
+			('Васильева Д.Д.'),
+			('Виноградова Е.Д.'),
+			('Воробьева У.Л.'),
+			('Воронина Е.С.'),
+			('Высоцкий А.Ф.'),
+			('Глушков А.Л.'),
+			('Гордеев А.Я.'),
+			('Григорьев Д.М.'),
+			('Григорьева А.И.'),
+			('Гусева В.М.'),
+			('Гущин Я.И.'),
+			('Давыдова М.М.'),
+			('Добрынин Т.В.'),
+			('Зотов К.М.'),
+			('Иванова А.К.'),
+			('Казакова Е.В.'),
+			('Калашникова М.М.'),
+			('Ковалев А.А.'),
+			('Ковалев Д.М.'),
+			('Корнилов М.А.'),
+			('Краснова А.Л.'),
+			('Крылова З.Г.'),
+			('Кудрявцева Е.Е.'),
+			('Кузнецов А.Д.'),
+			('Кузнецова В.Л.'),
+			('Лопатин М.Н.'),
+			('Лыков Р.С.'),
+			('Марков Н.М.'),
+			('Марков А.Н.'),
+			('Мартынова О.Р.'),
+			('Медведева В.М.'),
+			('Наумова В.А.'),
+			('Никитина А.А.'),
+			('Никифоров М.С.'),
+			('Никонова С.А.'),
+			('Овчинникова С.К.'),
+			('Орлов М.В.'),
+			('Панов А.Ф.'),
+			('Петухов Н.Т.'),
+			('Поляков М.Д.'),
+			('Пономарев Т.Т.'),
+			('Пономарева В.С.'),
+			('Попова С.Р.'),
+			('Рожкова А.Г.'),
+			('Романов А.К.'),
+			('Романова А.А.'),
+			('Савельева К.В.'),
+			('Семенов И.А.'),
+			('Семенова Д.М.'),
+			('Серов А.А.'),
+			('Смирнова П.А.'),
+			('Соколов М.Л.'),
+			('Софронов В.Д.'),
+			('Степанова Н.Г.'),
+			('Суханова О.Л.'),
+			('Тимофеев А.М.'),
+			('Тихонова А.Я.'),
+			('Уткина М.К.'),
+			('Федотов М.Я.'),
+			('Филиппов Д.М.'),
+			('Фомин П.С.'),
+			('Чеботарев М.Ф.'),
+			('Юдин Д.П.'),
+			('Яшина А.А.');
+			
+select * from employee_salary 
+
+create table roles_empoloyeeNDA(
+id serial primary key,
+employeeNDA_id int  unique not null, 
+roleNDA_id int not null,
+foreign key (employeeNDA_id)
+	references employees (id),
+foreign key (roleNDA_id)
+	references roles(id));
+
+insert into 
+
+select * from roles_empoloyeeNDA
+
+insert into roles_empoloyeenda (id, employeenda_id, rolenda_id)
+values 			(1, 2, 1),
+			(2, 1, 2),
+			(3, 8, 5),
+			(4, 7, 6),
+			(5, 6, 7),
+			(6, 5, 2),
+			(7, 3, 1),
+			(8, 10, 3),
+			(9, 4, 4),
+			(10, 9, 3),
+			(11, 15, 1),
+			(12, 11, 7),
+			(13, 14, 3),
+			(14, 20, 6),
+			(15, 18, 2),
+			(16, 19, 1),
+			(17, 17, 3),
+			(18, 16, 4),
+			(19, 12, 7),
+			(20, 28, 6),
+			(21, 29, 5),
+			(22, 30, 1),
+			(23, 22, 1),
+			(24, 23, 2),
+			(25, 26, 7),
+			(26, 25, 3),
+			(27, 24, 2),
+			(28, 27, 3),
+			(29, 21, 4),
+			(30, 13, 5),
+			(31, 40, 1),
+			(32, 39, 7),
+			(33, 31, 5),
+			(34, 37, 4),
+			(35, 35, 2),
+			(36, 38, 6),
+			(37, 36, 2),
+			(38, 33, 6),
+			(39, 34, 2),
+			(40, 32, 1);		
+
